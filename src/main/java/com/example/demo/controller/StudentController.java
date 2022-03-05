@@ -32,6 +32,17 @@ public class StudentController {
         return studentService.greetings();
     }
 
+    @GetMapping("/getByID/{id}")
+    public Student getStudentById(@PathVariable int id){
+         return  studentService.getByID(id);
+
+        //return "Student Record fetched successfully";
+    }
+
+    @PutMapping("/updStud/{id}")
+    public String updateStudentData(@RequestBody Student student,@PathVariable int id){
+        return "Updated records count is "+studentService.updateStudent(student,id);
+    }
 
 
 }

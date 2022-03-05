@@ -12,9 +12,11 @@ public class Student {
     private int id;
     private String name;
     private String lastName;
+    private String gender;
 
     public Student() {
     }
+
     public int getId() {
         return id;
     }
@@ -39,12 +41,21 @@ public class Student {
         this.lastName = lastName;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", gender='" + gender + '\'' +
                 '}';
     }
 }
